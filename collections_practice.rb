@@ -38,10 +38,5 @@ def sum_array(array)
 end
 
 def add_s(array)
-  array.each_with_index do |word, index|
-    if index != 1
-      word << 's'
-    end
-  end
-  array
+  array.each_with_index.collect { |element, index| index != 1 ? element << 's' : element }
 end
